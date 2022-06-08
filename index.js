@@ -58,7 +58,7 @@ console.log(isDivisible(100));
 // #### 4. What's the weather?
 // Use a **ternary operator** to complete this task. Create a function named "_isRaining_". If passed `true`, return "_wet day - you need an umbrella_". If passed `false`, return "_dry day - leave your umbrella at home_".
 function isRaining(boolean){
-   return (boolean === true) ? "_wet day - you need an umbrella_" : "_dry day - leave your umbrella at home_";
+   return (boolean === true) ? "wet day - you need an umbrella!" : "dry day - leave your umbrella at home!";
 }
 
 console.log(isRaining(true));
@@ -92,7 +92,6 @@ console.log(geometricalSequence());
 // #### 2. Multiples
 // Create a function named "_multiplesOfThree_" and **use a loop** to return the first five multiples of three: _`3 6 9 12 15`_. Concatenate each value to a string and return a string.
 function multiplesOfThree(){
-    let limit = 15;
     let result = [];
         for(i=1; i <= 5; i++){
             result.push(i*3);
@@ -128,7 +127,7 @@ console.log(powerOf(4));
 function vowelCount(string){
     let Counter = 0;
     for (let i =0; i <= string.length -1; i++){
-        if(string.charAt(i)==="a" || string.charAt(i)=== "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u"){
+        if(string.toLowerCase().charAt(i)==="a" || string.toLowerCase().charAt(i)=== "e" || string.toLowerCase().charAt(i) == "i" || string.toLowerCase().charAt(i) == "o" || string.toLowerCase().charAt(i) == "u"){
             Counter += 1;
         }
     }
@@ -138,6 +137,7 @@ function vowelCount(string){
 console.log(vowelCount("hello"));
 console.log(vowelCount("test"));
 console.log(vowelCount("fbw"));
+console.log(vowelCount("AEIOU"));
 // ##### Examples
 // ````javascript
 // vowelCount("hello") ➞ 2
@@ -150,5 +150,5 @@ console.log(vowelCount("fbw"));
 
 
 // DO NOT EDIT below this line - This will result in an automatic fail
-// module.exports = {nameOfCity, isDivisible, missingAngle, isRaining, geometricalSequence, multiplesOfThree, powerOf, vowelCount};
+module.exports = {nameOfCity, isDivisible, isRaining, geometricalSequence, multiplesOfThree, powerOf, vowelCount};
 
