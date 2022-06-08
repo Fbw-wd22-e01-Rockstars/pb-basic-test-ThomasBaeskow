@@ -111,7 +111,11 @@ console.log(_multiplesOfThree_());
 
 // #### 1. You've got the power
 // Create a function named "_powerOf_" which takes an integer as an argument and returns the integer to the power of itself. You should **use a Math object method** to make the calculation.
-
+function _powerOf_(int){
+    return Math.pow(int,int);
+}
+console.log(_powerOf_(3));
+console.log(_powerOf_(4));
 // ##### Examples
 // ````javascript
 // powerOf(3) ➞ 27
@@ -122,7 +126,19 @@ console.log(_multiplesOfThree_());
 
 // #### 1. How many? 
 // Create a function named "_vowelCount_" that accepts a string as an argument. Check how many vowels (A, a, E, e, I, i, O, o, U, u) the string contains, if any. **Return the vowel count** of the string. 
+function _vowelCount_(string){
+    let vowelCount = 0;
+    for (let i =0; i <= string.length -1; i++){
+        if(string.charAt(i)==="a" || string.charAt(i)=== "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u"){
+            vowelCount += 1;
+        }
+    }
+    return vowelCount;
+}
 
+console.log(_vowelCount_("hello"));
+console.log(_vowelCount_("test"));
+console.log(_vowelCount_("fbw"));
 // ##### Examples
 // ````javascript
 // vowelCount("hello") ➞ 2
