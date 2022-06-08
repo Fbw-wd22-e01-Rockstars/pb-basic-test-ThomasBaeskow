@@ -13,7 +13,7 @@
 // #### 1. Los or New?
 // Create a function named "_nameOfCity_". If a passed string begins with "_Los_" or "_New_", then return the full string. If not, return "_The city name does not begin with Los or New_". The function should be **case insensitive**.
 
-function _nameOfCity_ (string){
+function nameOfCity (string){
     if(string.toLowerCase().startsWith("los")===true || string.toLowerCase().startsWith("new")===true){
         return string;
     }else{
@@ -21,10 +21,9 @@ function _nameOfCity_ (string){
     }
 }
 
-console.log(_nameOfCity_("Los Angeles"));
-console.log(_nameOfCity_("New York"));
-console.log(_nameOfCity_("new york"));
-console.log(_nameOfCity_("Berlin"));
+console.log(nameOfCity("New York"));
+console.log(nameOfCity("newark"));
+console.log(nameOfCity("London"));
 
 
 // ##### Examples
@@ -58,12 +57,12 @@ console.log(isDivisible(100));
 
 // #### 4. What's the weather?
 // Use a **ternary operator** to complete this task. Create a function named "_isRaining_". If passed `true`, return "_wet day - you need an umbrella_". If passed `false`, return "_dry day - leave your umbrella at home_".
-function _isRaining_(boolean){
+function isRaining(boolean){
    return (boolean === true) ? "_wet day - you need an umbrella_" : "_dry day - leave your umbrella at home_";
 }
 
-console.log(_isRaining_(true));
-console.log(_isRaining_(false));
+console.log(isRaining(true));
+console.log(isRaining(false));
 // ##### Example
 // ````javascript
 // isRaining(true) ➞ 'wet day - you need an umbrella'
@@ -73,7 +72,7 @@ console.log(_isRaining_(false));
 
 // #### 1. Sequence
 // Create a function named "_geometricalSequence_" and **use a loop** to return the following sequence: _`1 2 4 8 16 32 64 128 256`_. Concatenate each value to a string and return a string.
-function _geometricalSequence_(){
+function geometricalSequence(){
     let limit = 256;
     let result = [];
         for(i=1; i <= limit; i*=2){
@@ -83,8 +82,8 @@ function _geometricalSequence_(){
         }
     return result.join(" ");
 }
-_geometricalSequence_();
-console.log(_geometricalSequence_());
+
+console.log(geometricalSequence());
 // ##### Example
 // ````javascript
 // geometricalSequence() ➞ '1 2 4 8 16 32 64 128 256'
@@ -92,7 +91,7 @@ console.log(_geometricalSequence_());
 
 // #### 2. Multiples
 // Create a function named "_multiplesOfThree_" and **use a loop** to return the first five multiples of three: _`3 6 9 12 15`_. Concatenate each value to a string and return a string.
-function _multiplesOfThree_(){
+function multiplesOfThree(){
     let limit = 15;
     let result = [];
         for(i=1; i <= 5; i++){
@@ -101,7 +100,7 @@ function _multiplesOfThree_(){
     return result.join(" ");
 }
 
-console.log(_multiplesOfThree_());
+console.log(multiplesOfThree());
 // ##### Example
 // ````javascript
 // multiplesOfThree() ➞ '3 6 9 12 15'
@@ -111,11 +110,11 @@ console.log(_multiplesOfThree_());
 
 // #### 1. You've got the power
 // Create a function named "_powerOf_" which takes an integer as an argument and returns the integer to the power of itself. You should **use a Math object method** to make the calculation.
-function _powerOf_(int){
+function powerOf(int){
     return Math.pow(int,int);
 }
-console.log(_powerOf_(3));
-console.log(_powerOf_(4));
+console.log(powerOf(3));
+console.log(powerOf(4));
 // ##### Examples
 // ````javascript
 // powerOf(3) ➞ 27
@@ -126,19 +125,19 @@ console.log(_powerOf_(4));
 
 // #### 1. How many? 
 // Create a function named "_vowelCount_" that accepts a string as an argument. Check how many vowels (A, a, E, e, I, i, O, o, U, u) the string contains, if any. **Return the vowel count** of the string. 
-function _vowelCount_(string){
-    let vowelCount = 0;
+function vowelCount(string){
+    let Counter = 0;
     for (let i =0; i <= string.length -1; i++){
         if(string.charAt(i)==="a" || string.charAt(i)=== "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u"){
-            vowelCount += 1;
+            Counter += 1;
         }
     }
-    return vowelCount;
+    return Counter;
 }
 
-console.log(_vowelCount_("hello"));
-console.log(_vowelCount_("test"));
-console.log(_vowelCount_("fbw"));
+console.log(vowelCount("hello"));
+console.log(vowelCount("test"));
+console.log(vowelCount("fbw"));
 // ##### Examples
 // ````javascript
 // vowelCount("hello") ➞ 2
