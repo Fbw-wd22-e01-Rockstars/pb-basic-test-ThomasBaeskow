@@ -92,7 +92,16 @@ console.log(_geometricalSequence_());
 
 // #### 2. Multiples
 // Create a function named "_multiplesOfThree_" and **use a loop** to return the first five multiples of three: _`3 6 9 12 15`_. Concatenate each value to a string and return a string.
+function _multiplesOfThree_(){
+    let limit = 15;
+    let result = [];
+        for(i=1; i <= 5; i++){
+            result.push(i*3);
+        }
+    return result.join(" ");
+}
 
+console.log(_multiplesOfThree_());
 // ##### Example
 // ````javascript
 // multiplesOfThree() ➞ '3 6 9 12 15'
