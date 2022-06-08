@@ -73,7 +73,18 @@ console.log(_isRaining_(false));
 
 // #### 1. Sequence
 // Create a function named "_geometricalSequence_" and **use a loop** to return the following sequence: _`1 2 4 8 16 32 64 128 256`_. Concatenate each value to a string and return a string.
-
+function _geometricalSequence_(){
+    let limit = 256;
+    let result = [];
+        for(i=1; i <= limit; i*=2){
+            if(limit >= i){
+                result.push(i)
+            }   
+        }
+    return result.join(" ");
+}
+_geometricalSequence_();
+console.log(_geometricalSequence_());
 // ##### Example
 // ````javascript
 // geometricalSequence() ➞ '1 2 4 8 16 32 64 128 256'
