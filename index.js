@@ -36,6 +36,17 @@ console.log(_nameOfCity_("Berlin"));
 
 // #### 2. isDivisible?
 // Create a function named "_isDivisible_". The function should take an integer as an argument. If the integer is divisible by 100, then return true. If not, return false.
+function isDivisible(int){
+    if(int%100===0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+console.log(isDivisible(1));
+console.log(isDivisible(1000));
+console.log(isDivisible(100));
 
 // ##### Examples
 // ````javascript
