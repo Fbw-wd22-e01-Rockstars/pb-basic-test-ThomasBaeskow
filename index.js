@@ -58,7 +58,12 @@ console.log(isDivisible(100));
 
 // #### 4. What's the weather?
 // Use a **ternary operator** to complete this task. Create a function named "_isRaining_". If passed `true`, return "_wet day - you need an umbrella_". If passed `false`, return "_dry day - leave your umbrella at home_".
+function _isRaining_(boolean){
+   return (boolean === true) ? "_wet day - you need an umbrella_" : "_dry day - leave your umbrella at home_";
+}
 
+console.log(_isRaining_(true));
+console.log(_isRaining_(false));
 // ##### Example
 // ````javascript
 // isRaining(true) ➞ 'wet day - you need an umbrella'
